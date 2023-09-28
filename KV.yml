@@ -10,7 +10,7 @@ steps:
   inputs:
     azureSubscription: ''
     KeyVaultName: ''
-    SecretsFilter: '*' # 'DatabasePassword'
+    SecretsFilter: '*' # '*'
     RunAsPreJob: false
 
 - task: CmdLine@2
