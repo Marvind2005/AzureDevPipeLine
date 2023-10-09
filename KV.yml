@@ -10,7 +10,7 @@ steps:
   inputs:
     azureSubscription: 'SPN-KeyVault-01'
     KeyVaultName: 'KeyVaultPipeline1'
-    SecretsFilter: '*'
+    SecretsFilter: 'Secret1'
     RunAsPreJob: false
 
 - task: CmdLine@2
