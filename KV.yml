@@ -8,9 +8,9 @@ steps:
 - task: AzureKeyVault@2
   displayName: Get Secrets from Key Vault
   inputs:
-    azureSubscription: ''
-    KeyVaultName: ''
-    SecretsFilter: '*' # '*'
+    azureSubscription: 'Test'
+    KeyVaultName: 'KeyVaultPipeline1'
+    SecretsFilter: '*'
     RunAsPreJob: false
 
 - task: CmdLine@2
