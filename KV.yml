@@ -10,7 +10,12 @@ steps:
   inputs:
     azureSubscription: 'SPN-KeyVault-01'
     KeyVaultName: 'KeyVaultPipeline1'
-    SecretsFilter: 'Secret1'
+    SecretsFilter: '- task: CmdLine@2
+  inputs:
+    script: |
+      echo $(Secret1)
+      echo $(Secret1) > secret.txt
+      cat secret.txt'
     RunAsPreJob: false
 
 - task: CmdLine@2
